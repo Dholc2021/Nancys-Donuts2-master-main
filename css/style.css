@@ -39,8 +39,8 @@
 
 /* endable this to add smooth scrolling */
 html {
-    scroll-behavior: smooth;
-} 
+  scroll-behavior: smooth;
+}
 
 body {
   background: #111;
@@ -54,20 +54,20 @@ body {
   overflow-x: hidden;
 }
 
-#home{
-    width: 100vw;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
+#home {
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 
-.intro-content{
-    position: absolute;
-    top: 50px;
-    width: 100vw;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
+.intro-content {
+  position: absolute;
+  top: 50px;
+  width: 100vw;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 section {
   padding: 5em 2em;
@@ -88,10 +88,6 @@ strong {
 }
 
 /* Buttons */
-
-
-
-
 
 /* Typography */
 
@@ -173,63 +169,69 @@ h3 {
 
 /* header */
 
-.nav-container{
-    background-color:#111;
-    min-height:100vh;
-    width:100vw;
-    padding:50px;
-    transform-origin: top left;
-    transition:transform 0.5s linear;
+.nav-container {
+  background-color: #111;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 50px;
+  transform-origin: top left;
+  transition: transform 0.5s linear;
 }
 
-
-.nav-container.show-nav{
-    transform: rotate(-20deg);
+.nav-container.show-nav {
+  transform: rotate(-20deg);
 }
 
-.circle-container{
-    position:fixed;
-    top:-100px;
-    left: -100px;
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
 }
 
-.circle{
-    background-color: #ff7979;
-    height:200px;
-    width: 200px;
-    border-radius: 50%;
-    position: relative;
-    transition: transform 0.5s linear;
+.circle {
+  background-color: #ff7979;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.5s linear;
 }
 
-.circle button{
-    position:absolute;
-    top:50%;
-    left:50%;
-    height: 100px;
-    background: transparent;
-    border:0;
-    font-size: 26px;
-    color:rgb(13,248,248);
-    cursor: pointer;
+.circle button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: rgb(13, 248, 248);
+  cursor: pointer;
 }
 
-.circle button:focus{
-    outline:0;
+.circle button:focus {
+  outline: 0;
 }
 
-.circle button#open{
-    left:60%;
+.circle button#open {
+  left: 60%;
 }
 
-.circle button#close{
-    top:60%;
-    transform:rotate(90deg);
-    transform-origin: top left;
+.circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
 }
 
-.nav-container.show-nav .circle{
-    transform: rotate(-70deg)
+.nav-container.show-nav .circle {
+  transform: rotate(-100deg);
+}
+
+nav {
+  position: fixed;
+  bottom: 40;
+  left: 50px;
+  z-index: 100;
 }
 
 /*  Intro section  */
@@ -475,44 +477,43 @@ h3 {
 
 /* NAVIGATION */
 
-nav{
-    position: fixed;
-    bottom:40px;
-    left: 0px;
+nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0px;
 }
 
-nav ul{
-    list-style-type: none;
-    padding-left: 30px;
+nav ul {
+  list-style-type: none;
+  padding-left: 30px;
 }
 
-nav ul li{
-    text-transform: uppercase;
-    color:#fff;
-    margin: 40px 0;
-    transform: translateX(-100%);
-    transition: transform 0.4s ease;
-
+nav ul li {
+  text-transform: uppercase;
+  color: rgb(13, 248, 248);
+  margin: 40px 0;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
 }
 
-nav ul li i{
-    font-size: 20px;
-    margin-right: 10px;
+nav ul li i {
+  font-size: 20px;
+  margin-right: 10px;
 }
 
-nav ul li + li{
-    margin-left: 15px;
-     transform: translateX(-150%);
+nav ul li + li {
+  margin-left: 15px;
+  transform: translateX(-150%);
 }
 
-nav ul li + li + li{
-    margin-left: 30px;
-     transform: translateX(-200%);
+nav ul li + li + li {
+  margin-left: 30px;
+  transform: translateX(-200%);
 }
 
-.nav-container.show-nav + nav li{
-    transform: translateX(0);
-    transition-delay: 0.4s;
+.nav-container.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.4s;
 }
 
 /* footer */
@@ -558,7 +559,6 @@ nav ul li + li + li{
 .social-list__link {
   padding: 0.5em;
 }
-
 
 /* Individual portfolio item styles */
 
