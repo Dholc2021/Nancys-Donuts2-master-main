@@ -38,9 +38,9 @@
 /* General styles */
 
 /* endable this to add smooth scrolling */
-/* html {
+html {
     scroll-behavior: smooth;
-} */
+} 
 
 body {
   background: #111;
@@ -51,8 +51,24 @@ body {
   line-height: 1.6;
   min-width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
+#home{
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-content{
+    position: absolute;
+    top: 50px;
+    width: 100vw;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
 section {
   padding: 5em 2em;
 }
@@ -73,23 +89,9 @@ strong {
 
 /* Buttons */
 
-.btn {
-  display: inline-block;
-  padding: 0.5em 2.5em;
-  background: var(--clr-accent);
-  color: var(--clr-dark);
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: var(--fw-bold);
-  transition: transform 200ms ease-in-out;
-}
 
-.btn:hover {
-  transform: scale(1.1);
-}
+
+
 
 /* Typography */
 
@@ -171,111 +173,63 @@ h3 {
 
 /* header */
 
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 1em;
+.nav-container{
+    background-color:#111;
+    min-height:100vh;
+    width:100vw;
+    padding:50px;
+    transform-origin: top left;
+    transition:transform 0.5s linear;
 }
 
-.logo {
-  max-width: 100px;
+
+.nav-container.show-nav{
+    transform: rotate(-20deg);
 }
 
-.nav {
-  position: fixed;
-  background: var(--clr-dark);
-  color: var(--clr-light);
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-
-  transform: translateX(100%);
-  transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
+.circle-container{
+    position:fixed;
+    top:-100px;
+    left: -100px;
 }
 
-.nav__list {
-  list-style: none;
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 0;
-  padding: 0;
+.circle{
+    background-color: #ff7979;
+    height:200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
 }
 
-.nav__link {
-  color: inherit;
-  font-weight: var(--fw-bold);
-  font-size: var(--fs-h2);
-  text-decoration: none;
+.circle button{
+    position:absolute;
+    top:50%;
+    left:50%;
+    height: 100px;
+    background: transparent;
+    border:0;
+    font-size: 26px;
+    color:rgb(13,248,248);
+    cursor: pointer;
 }
 
-.nav__link:hover {
-  color: var(--clr-accent);
+.circle button:focus{
+    outline:0;
 }
 
-.nav-toggle {
-  padding: 0.5em;
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  position: absolute;
-  right: 1em;
-  top: 1em;
-  z-index: 1000;
+.circle button#open{
+    left:60%;
 }
 
-.nav-open .nav {
-  transform: translateX(0);
+.circle button#close{
+    top:60%;
+    transform:rotate(90deg);
+    transform-origin: top left;
 }
 
-.nav-open .nav-toggle {
-  position: fixed;
-}
-
-.nav-open .hamburger {
-  transform: rotate(0.625turn);
-}
-
-.nav-open .hamburger::before {
-  transform: rotate(90deg) translateX(-6px);
-}
-
-.nav-open .hamburger::after {
-  opacity: 0;
-}
-
-.hamburger {
-  display: block;
-  position: relative;
-}
-
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-  background: var(--clr-accent);
-  width: 2em;
-  height: 3px;
-  border-radius: 1em;
-  transition: transform 250ms ease-in-out;
-}
-
-.hamburger::before,
-.hamburger::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-}
-
-.hamburger::before {
-  top: 6px;
-}
-.hamburger::after {
-  bottom: 6px;
+.nav-container.show-nav .circle{
+    transform: rotate(-70deg)
 }
 
 /*  Intro section  */
@@ -443,6 +397,123 @@ header {
   transform: scale(1.2);
   opacity: 0.5;
 }
+/* CONTACT FORM */
+
+.form-container {
+  background: hsl(9deg 92% 80%);
+  color: rgb(14, 99, 174);
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.form-container h1 {
+  text-align: center;
+}
+
+.form-container a {
+  text-decoration: none;
+  color: rgba(13, 248, 248);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0;
+  margin: 20px 0;
+  color: rgb(14, 99, 174);
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.submit-btn:focus {
+  outline: 0;
+  transform: scale(0.98);
+}
+
+.submit-btn a {
+  background: rgb(14, 99, 174);
+}
+
+.form-control {
+  position: relative;
+  margin: 20px 0 30px;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  width: 100%;
+  display: block;
+  padding: 15px 0;
+  color: #fff;
+  font-size: 16px;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: lightblue;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+
+.form-control label span {
+  display: inline-block;
+  transition: transform 0.3s ease-in;
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  transform: translateY(-30px);
+}
+
+/* NAVIGATION */
+
+nav{
+    position: fixed;
+    bottom:40px;
+    left: 0px;
+}
+
+nav ul{
+    list-style-type: none;
+    padding-left: 30px;
+}
+
+nav ul li{
+    text-transform: uppercase;
+    color:#fff;
+    margin: 40px 0;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+
+}
+
+nav ul li i{
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+nav ul li + li{
+    margin-left: 15px;
+     transform: translateX(-150%);
+}
+
+nav ul li + li + li{
+    margin-left: 30px;
+     transform: translateX(-200%);
+}
+
+.nav-container.show-nav + nav li{
+    transform: translateX(0);
+    transition-delay: 0.4s;
+}
 
 /* footer */
 
@@ -488,81 +559,6 @@ header {
   padding: 0.5em;
 }
 
-/* CONTACT FORM */
-
-.form-container {
-  background: hsl(9deg 92% 80%);
-  color: rgb(14, 99, 174);
-  padding: 30px;
-  border-radius: 5px;
-}
-
-.form-container h1 {
-  text-align: center;
-}
-
-.form-container a {
-  text-decoration: none;
-  color: rgba(13, 248, 248);
-}
-
-.submit-btn {
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 0;
-  margin: 20px 0;
-  color: rgb(14, 99, 174);
-  font-family: inherit;
-  font-size: 16px;
-}
-
-.submit-btn:focus {
-  outline: 0;
-  transform: scale(0.98);
-}
-
-.submit-btn a{
-    background: rgb(14, 99, 174);
-}
-
-.form-control {
-  position: relative;
-  margin: 20px 0 30px;
-}
-
-.form-control input {
-  background-color: transparent;
-  border: 0;
-  border-bottom: 2px solid #fff;
-  width: 100%;
-  display: block;
-  padding: 15px 0;
-  color: #fff;
-  font-size: 16px;
-}
-
-.form-control input:focus,
-.form-control input:valid {
-  outline: 0;
-  border-bottom-color: lightblue;
-}
-
-.form-control label {
-  position: absolute;
-  top: 15px;
-  left: 0;
-}
-
-.form-control label span {
-  display: inline-block;
-  transition: transform 0.3s ease-in;
-}
-
-.form-control input:focus + label span,
-.form-control input:valid + label span {
-  transform: translateY(-30px);
-}
 
 /* Individual portfolio item styles */
 

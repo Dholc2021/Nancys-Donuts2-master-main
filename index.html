@@ -19,29 +19,47 @@
 
 <body>
     <header>
-        <button class="nav-toggle" aria-label="toggle navigation">
-            <span class="hamburger"></span>
-        </button>
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-                <li class="nav__item"><a href="#about-us" class="nav__link">About Us</a></li>
-                <li class="nav__item"><a href="#our-donuts" class="nav__link">Our Donuts</a></li>
-                <li class="nav__item"><a href="#donut-gallery" class="nav__link">Donut Gallery</a></li>
+        <div class="nav-container">
+            <div class="circle-container">
+                <div class="circle">
+                    <button id="close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <button id="open">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            
+            
+            <div class="intro-content">
+            <!-- Introduction -->
+            <section class="intro" id="home">
+                <h1 style="color: rgb(#fff4b4);" class="section__title section__title--intro">
+                    Welcome To <strong><em>Nancy's Donuts</em></strong>
+                </h1>
+                <p style="color: rgb(14, 99, 174)" class="section__subtitle section__subtitle--intro">In Grenada, Mississippi
+                </p>
+                <img src="img/assorted donuts2.jpg" style="width: 250px; height: 250px;" alt="a picture of Jane Smith smiling">
+            </section>
+        </div>
+        
+        
+        <nav>
+            <ul>
+                <li><i class="fas fa-home"></i>Home</li>
+                <li><i class="fas fa-user-alt"></i>About</li>
+                <li><i class="fas fa-user-alt"></i>Donuts</li>
+                <li><i class="fas fa-envelope"></i>Contact</li>
+    
             </ul>
         </nav>
-    </header>
+        
 
-    <!-- Introduction -->
-    <section class="intro" id="home">
-        <h1 style="color: rgb(#fff4b4);" class="section__title section__title--intro">
-            Welcome To <strong><em>Nancy's Donuts</em></strong>
-        </h1>
-        <p style="color: rgb(14, 99, 174)" class="section__subtitle section__subtitle--intro">In Grenada, Mississippi
-        </p>
-        <img src="img/assorted donuts2.jpg" style="width: 250px; height: 250px;" alt="a picture of Jane Smith smiling">
-    </section>
-
+          </div>  
+        </header>  
+    
+                
 
     <div class="box"style="width:100vw; height:100%;">
     <!-- My services -->
@@ -56,10 +74,11 @@
                     consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                     enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                     consequat.</p>
-            </div> <!-- / service -->
+            </div> 
             <a href="#about-us" class="btn">Donut Gallery</a>
     </section>
     </div>
+    
 
     <div class="box"style="width:100vw; height:100%;">
     <!-- About me -->
@@ -142,7 +161,6 @@
         </form>
         <p>Don't have an account? <a href="#" style="color:#333";>Register</a> </p>
     </div>
-
 </div>
     <div class="box"style="width:100vw; height:100%;">    <!-- Footer -->
     <footer class="footer">
@@ -172,6 +190,7 @@
         </ul>
     </footer>
     </div>
+</div>
 
 
     <script src="main.js"></script>

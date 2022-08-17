@@ -1,16 +1,5 @@
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelectorAll('.nav__link')
 
-navToggle.addEventListener('click', () => {
-    document.body.classList.toggle('nav-open');
-});
-
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        document.body.classList.remove('nav-open');
-    })
-})
-
+// SCROLL ANIMATION
 const boxes = document.querySelectorAll('.box')
 
 window.addEventListener('scroll', checkBoxes)
@@ -32,6 +21,7 @@ function checkBoxes() {
     })
 }
 
+// CONTACT-FORM-ANIMATION
 const labels = document.querySelectorAll('.form-control label');
 
 labels.forEach(label => {
@@ -41,3 +31,13 @@ labels.forEach(label => {
         .map((letter, idx) => `<span style="transition-delay:${idx*50}ms">${letter}</span>`)
         .join('')
 })
+
+// ROTATING-NAVIGATION
+
+const open = document.getElementById('open');
+const close = document.getElementById('close');
+const container = document.querySelector('.nav-container');
+
+open.addEventListener('click', () => container.classList.add('show-nav'));
+close.addEventListener('click', () => container.classList.remove('show-nav'))
+
